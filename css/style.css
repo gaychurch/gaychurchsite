@@ -1,0 +1,401 @@
+/* --- Updated and Enhanced CSS for "Beauty" --- */
+
+/* Import Roboto Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Color Variables for easier customization */
+:root {
+    --dark-bg: #121212;          /* Main dark background */
+    --dark-bg-lighter: #1e1e1e;   /* Slightly lighter dark background (header, footer) */
+    --text-color-light: #f0f0f0;  /* Light text color (main text) */
+    --text-color-grey: #999;     /* Grey text color (secondary text, footer) */
+    --green-accent: #bbffbb;      /* Vibrant green accent */
+    --green-accent-hover: #a0e0a0; /* Slightly darker green for hover */
+    --card-bg: #1e1e1e;          /* Background for cards/book items */
+    --border-color: #282828;       /* Subtle border color */
+}
+
+/* Reset and Basic Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg); /* Dark background using variable */
+    color: var(--text-color-light);   /* Light text color using variable */
+    line-height: 1.6; /* Improved line height for readability */
+    -webkit-font-smoothing: antialiased; /* Better font rendering for webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Better font rendering for Firefox on macOS */
+}
+
+a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: var(--green-accent); /* Green accent color on hover for links */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-item {
+    flex-grow: 1;
+    min-width: 180px;
+}
+
+/* --- Reusable Styles --- */
+.button {
+    display: inline-block;
+    padding: 12px 25px; /* Slightly larger buttons */
+    border-radius: 8px; /* More rounded buttons */
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-weight: 500; /* Slightly bolder button text */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Button hover transition */
+}
+
+.green-button {
+    background-color: var(--green-accent); /* Green accent color */
+    color: var(--dark-bg); /* Dark text on green button */
+}
+
+.green-button:hover {
+    background-color: var(--green-accent-hover); /* Slightly darker green on hover */
+    color: var(--text-color-light); /* Light text on hover */
+}
+
+.card {
+    background-color: var(--card-bg); /* Card background color */
+    border-radius: 10px; /* Rounded corners for cards */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+    border-bottom: 2px solid var(--green-accent); /* Green underline for section titles */
+    padding-bottom: 5px;
+    display: inline-block; /* Underline only as wide as text */
+}
+
+.see-all-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: var(--green-accent); /* Green accent color for links */
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.see-all-link:hover {
+    color: var(--green-accent-hover);
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--dark-bg-lighter); /* Lighter dark background */
+    padding: 15px 25px; /* More horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700; /* Bolder logo text */
+    color: var(--text-color-light);
+}
+
+nav ul {
+    display: none; /* Hidden on mobile by default */
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: var(--border-color); /* Darker background on hover/active */
+    color: var(--green-accent); /* Green accent color for active/hover */
+}
+
+.bottom-nav a img {
+    margin-bottom: 8px;
+    width: 2rem;
+    opacity: 60%;
+}
+
+.bottom-nav a.active img {
+    opacity: 100%;
+}
+
+
+/* --- Main Content --- */
+main {
+    padding: 25px; /* More padding around main content */
+}
+
+h1, h2, h3 {
+    color: var(--text-color-light); /* White headings */
+    margin-bottom: 15px;
+    font-weight: 700; /* Bolder headings */
+    line-height: 1.3; /* Tighter line height for headings */
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+.book-carousel, .book-grid {
+    display: flex;
+    overflow-x: auto; /* Horizontal scrolling for carousels */
+    gap: 20px; /* Increased gap */
+    margin-bottom: 30px; /* Increased margin */
+    padding-bottom: 15px; /* Add padding to allow full scrollbar visibility */
+}
+
+.book-grid {
+    flex-wrap: wrap; /* Grid layout */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.book-item {
+    width: 160px; /* Slightly wider book items */
+    text-align: left; /* Align text to the left within book item */
+    border-radius: 10px;
+    overflow: hidden; /* Clip content to rounded corners */
+    background-color: var(--card-bg); /* Card background for book items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for book items */
+    transition: transform 0.2s ease-in-out; /* Hover transform effect */
+}
+
+.book-item:hover {
+    transform: scale(1.03); /* Slight scale up on hover */
+}
+
+.book-item a {
+    display: block; /* Make the whole book item clickable */
+}
+
+.cover-image {
+    width: 100%;
+    margin-bottom: 6px;
+    display: block; /* Prevent extra space below image */
+}
+
+.book-item h3 {
+    font-size: 1.1em;
+    margin: 5px 1px 1px 5px;
+    color: var(--text-color-light);
+}
+
+.book-item p {
+    font-size: 0.9em;
+    margin: 5px 1px 1px 5px;
+    color: var(--text-color-grey);
+    margin-bottom: 10px;
+}
+
+
+/* --- Work Detail Page Specific --- */
+.work-detail-page {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically on mobile */
+}
+
+.work-detail-page .cover-section {
+    text-align: center; /* Center cover image */
+    margin-bottom: 30px;
+}
+
+.work-detail-page .large-cover {
+    max-width: 300px; /* Adjust size as needed */
+    border-radius: 15px; /* More rounded large cover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for large cover */
+}
+
+.work-detail-page .info-section {
+    color: #121212;
+}
+
+.work-detail-page .read-now-button {
+    margin-bottom: 25px;
+    font-size: 1.1em; /* Slightly larger "Read Now" button */
+}
+
+.work-detail-page .chapter-list {
+    margin-top: 20px;
+}
+
+.work-detail-page .chapter-list h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.work-detail-page .chapter-list ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color); /* Separator for chapter list */
+    padding-bottom: 10px;
+}
+
+.work-detail-page .chapter-list ul li:last-child {
+    border-bottom: none; /* Remove border from last chapter item */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.work-detail-page .chapter-list ul li a {
+    display: block; /* Make chapter links fill the line */
+    padding: 8px 0;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.work-detail-page .chapter-list ul li a:hover {
+    background-color: var(--border-color); /* Hover effect for chapter links */
+    color: var(--green-accent);
+    padding-left: 10px; /* Slight indent on hover */
+}
+
+
+.work-detail-page .view-all-chapters {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--green-accent); /* Green accent color for links */
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.work-detail-page .view-all-chapters:hover {
+    color: var(--green-accent-hover);
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-bg-lighter);
+    padding: 20px 25px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-color-grey); /* Lighter grey for footer text */
+    border-top: 1px solid var(--border-color); /* Subtle top border for footer */
+}
+
+
+/* --- Mobile Styles (Default - No Media Query) ---
+   Styles here will apply to mobile screens by default */
+
+/* Header - For Mobile (Simplified) */
+header {
+    padding: 10px 15px; /* Reduced padding for mobile */
+    /* ... other header styles inherited from above ... */
+}
+
+nav ul {
+    display: none; /* Hide top navigation on mobile by default */
+}
+
+/* Main Content - Mobile */
+main {
+    padding: 15px; /* Reduced padding for mobile */
+}
+
+.book-carousel, .book-grid {
+    gap: 15px; /* Reduced gap for mobile */
+    margin-bottom: 20px; /* Reduced margin for mobile */
+}
+
+.book-item {
+    width: 130px; /* Smaller book items on mobile */
+}
+
+/* --- Bottom Navigation Bar (Mobile) --- */
+.bottom-nav {
+    position: fixed; /* Fixed to the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-bg-lighter); /* Same as header background */
+    padding: 15px 0; /* Slightly more padding */
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center;
+    z-index: 100; /* Ensure it's on top of other content */
+    border-top: 1px solid var(--border-color); /* Subtle top border for bottom nav */
+}
+
+.bottom-nav a {
+    display: flex; /* For icon and text alignment */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    color: var(--text-color-grey); /* Default icon/text color */
+    font-size: 0.85em; /* Slightly larger text for bottom nav */
+    transition: color 0.2s ease-in-out;
+}
+
+.bottom-nav a.active,
+.bottom-nav a:hover {
+    color: var(--green-accent); /* Green accent for active/hover */
+}
+
+.bottom-nav i { /* Assuming you'll use icon fonts or SVG icons */
+    font-size: 1.3em; /* Icon size */
+    margin-bottom: 8px; /* Spacing between icon and text */
+    display: block; /* Ensure icons are block-level for spacing */
+}
+
+/* --- Media Query for Tablet and Desktop (Screens wider than 768px) --- */
+@media (min-width: 769px) {
+    /* --- Desktop/Tablet Header --- */
+    header {
+        padding: 15px 25px; /* Revert to larger padding for desktop */
+    }
+
+    nav ul {
+        display: flex; /* Show top navigation on larger screens */
+    }
+
+    /* --- Main Content - Desktop/Tablet --- */
+    main {
+        padding: 25px; /* Revert to larger padding for desktop */
+    }
+
+    .book-carousel, .book-grid {
+        gap: 20px; /* Revert to larger gap for desktop */
+        margin-bottom: 30px; /* Revert to larger margin for desktop */
+    }
+
+    .book-item {
+        width: 160px; /* Revert to larger book item width for desktop */
+    }
+
+    /* --- Hide Bottom Navigation on Desktop/Tablet --- */
+    .bottom-nav {
+        display: none;
+    }
+}
