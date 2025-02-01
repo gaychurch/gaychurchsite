@@ -1,0 +1,68 @@
+[
+    {
+      "Title": "Solo Leveling",
+      "Author": "Chugong",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "У світі, де мисливці володіють надприродними здібностями, слабкий мисливець на ім'я Сон Джин-Ву отримує унікальну можливість стати найсильнішим.",
+      "Rating": 4.9,
+      "Genre": ["Action", "Fantasy", "Adventure"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5"],
+      "NowReading": true,
+      "Featured": true
+    },
+    {
+      "Title": "Ranked Adventurer",
+      "Author": "Nekokurage",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "Куроха Міна, дівчина-авантюристка з залізною волею, прагне стати авантюристом рангу S, щоб довести свою цінність і знайти своє місце у світі.",
+      "Rating": 4.5,
+      "Genre": ["Adventure", "Fantasy", "Isekai"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8"],
+      "NowReading": true,
+      "Featured": false
+    },
+    {
+      "Title": "Dandadan",
+      "Author": "Yukinobu Tatsu",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "Історія про Кен Такакура, хлопця-окультиста, який вірить в привидів, але не в інопланетян, та Момо Аясе, дівчину, яка вірить в інопланетян, але не в привидів. Їхні життя переплітаються після зустрічі з обома.",
+      "Rating": 5.0,
+      "Genre": ["Comedy", "Sci-Fi", "Action"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10"],
+      "NowReading": false,
+      "Featured": true
+    },
+    {
+      "Title": "Sakamoto Days",
+      "Author": "Yuto Suzuki",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "Таро Сакамото колись був легендарним вбивцею, якого боялися злочинці і шанували його колеги. Але одного дня він зник. Тепер Сакамото живе тихим життям, одружений і має власну крамницю.",
+      "Rating": 4.8,
+      "Genre": ["Action", "Comedy", "Slice of Life"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12"],
+      "NowReading": false,
+      "Featured": false
+    },
+    {
+      "Title": "The Apothecary Diaries",
+      "Author": "Itsuki Nanao",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "У імператорському дворі, через місяць після того, як її викрали та змусили працювати служницею, Маомао, кмітлива дівчина з фармацевтичної гільдії, таємно вирішує проблему з дітьми імператора, які живуть недовго.",
+      "Rating": 4.7,
+      "Genre": ["Mystery", "Drama", "Historical"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Chapter 13", "Chapter 14", "Chapter 15"],
+      "NowReading": false,
+      "Featured": false
+    },
+    {
+      "Title": "Vast Ocean",
+      "Author": "Hyeon Kim",
+      "CoverImage": "https://picsum.photos/200/300",
+      "Synopsis": "Якщо є щось, чого хочуть студенти коледжу, то це гроші! Після того, як Іорі влаштовується на роботу в закусочну, він зустрічає знайомого...",
+      "Rating": 4.6,
+      "Genre": ["Romance", "Slice of Life", "Drama"],
+      "ChapterList": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12", "Chapter 13", "Chapter 14", "Chapter 15", "Chapter 16", "Chapter 17", "Chapter 18"],
+      "NowReading": false,
+      "Featured": true
+    }
+  ]

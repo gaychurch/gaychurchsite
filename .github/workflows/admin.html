@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Manga Reader</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f0f0f0; color: #333; }
+        .form-group textarea { font-family: sans-serif; } /* Ensure textarea font matches */
+        .form-group input[type="checkbox"] { width: auto; } /* Adjust checkbox width */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Admin Panel - The Gay Church</div>
+        <nav>
+            <!-- Тут можна додати навігацію адмін-панелі, якщо потрібно -->
+        </nav>
+    </header>
+
+    <main class="admin-page">
+        <h1>Admin Panel - Manga Data</h1>
+
+        <section class="add-manga-section card">
+            <h2 class="section-title">Add New Manga</h2>
+            <form id="manga-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div class="form-group">
+                    <label for="coverImage">Cover Image URL:</label>
+                    <input type="text" id="coverImage" name="coverImage">
+                </div>
+                <div class="form-group">
+                    <label for="synopsis">Synopsis:</label>
+                    <textarea id="synopsis" name="synopsis" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (0-5):</label>
+                    <input type="number" id="rating" name="rating" min="0" max="5" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre (comma-separated):</label>
+                    <input type="text" id="genre" name="genre">
+                </div>
+                <div class="form-group">
+                    <label for="chapterList">Chapter List (comma-separated):</label>
+                    <textarea id="chapterList" name="chapterList" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="nowReading">Now Reading:</label>
+                    <input type="checkbox" id="nowReading" name="nowReading">
+                </div>
+                <div class="form-group">
+                    <label for="featured">Featured:</label>
+                    <input type="checkbox" id="featured" name="featured">
+                </div>
+
+                <button type="submit" class="button green-button">Add Manga</button>
+            </form>
+        </section>
+
+        <section class="updated-json-section card">
+            <h2 class="section-title">Updated JSON Data</h2>
+            <textarea id="updated-json-data" rows="20" readonly style="width: 100%; font-family: monospace;"></textarea>
+            <p class="instruction">
+                1. Select all text in the textarea above (Ctrl+A or Cmd+A).<br>
+                2. Copy the text (Ctrl+C or Cmd+C).<br>
+                3. Open your <code>data/manga-data.json</code> file in your code editor.<br>
+                4. Replace the entire content of <code>data/manga-data.json</code> with the copied text (Ctrl+V or Cmd+V).<br>
+                5. Save <code>data/manga-data.json</code> file.<br>
+                6. Commit and push changes to your GitHub repository.
+            </p>
+        </section>
+
+        <section class="add-chapter-section card">
+            <h2 class="section-title">Add Chapter to Manga</h2>
+            <form id="chapter-form">
+                <div class="form-group">
+                    <label for="manga-select">Select Manga:</label>
+                    <select id="manga-select" name="manga-select" required>
+                        <!-- Опції манги будуть вставлені тут JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="chapter-title">Chapter Title:</label>
+                    <input type="text" id="chapter-title" name="chapter-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="chapter-content">Chapter Content (Text or Image URLs - separated by new lines):</label>
+                    <textarea id="chapter-content" name="chapter-content" rows="5" placeholder="Enter text for novels or image URLs (one per line) for manga"></textarea>
+                    <small class="form-text text-muted">For manga, enter one image URL per line. For novels, enter the chapter text.</small>
+                </div>
+
+                <button type="submit" class="button green-button">Add Chapter</button>
+            </form>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html">
+            <img src="icons/house.svg" width="30rem" style="margin-bottom: 8px; opacity: 60%;" alt="">
+            Home
+        </a>
+        <a href="catalog.html" class="active">
+            <img src="icons/explore.svg" width="30rem" style="margin-bottom: 8px;" alt="">
+            Catalog
+        </a>
+        <a href="download.html">
+            <img src="icons/download.svg" width="30rem" style="margin-bottom: 8px; opacity: 60%;" alt="">
+            Download
+        </a>
+    </nav>
+
+    <footer>
+        <p>© 2023 The Gay Church Admin</p>
+    </footer>
+
+    <script src="../js/admin-script.js"></script>
+</body>
+</html>
